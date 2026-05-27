@@ -1,114 +1,320 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benim Portfolyom</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
+<title>Muhammed Arslan</title>
 
-    body{
-      margin:0;
-      font-family:Arial;
-      background:#0f0f0f;
-      color:white;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    header{
-      text-align:center;
-      padding:80px 20px;
-      background:#111;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header h1{
-      font-size:50px;
-      margin-bottom:10px;
-    }
+<style>
 
-    header p{
-      color:#aaa;
-      font-size:18px;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .btn{
-      margin-top:20px;
-      padding:12px 25px;
-      border:none;
-      background:orange;
-      color:black;
-      font-weight:bold;
-      cursor:pointer;
-      border-radius:10px;
-    }
+body{
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
 
-    section{
-      padding:60px 20px;
-      max-width:900px;
-      margin:auto;
-    }
+/* NAVBAR */
 
-    h2{
-      color:orange;
-      margin-bottom:20px;
-    }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 10%;
+background:#111;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+}
 
-    .card{
-      background:#1a1a1a;
-      padding:20px;
-      margin-bottom:15px;
-      border-radius:10px;
-    }
+nav h1{
+color:orange;
+font-size:30px;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#111;
-      color:#777;
-    }
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
 
-  </style>
+nav a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav a:hover{
+color:orange;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+background:radial-gradient(circle,#151515,#0a0a0a);
+}
+
+.hero h2{
+font-size:70px;
+margin-bottom:15px;
+animation:slide 1.5s ease;
+}
+
+.hero span{
+color:orange;
+text-shadow:0 0 20px orange;
+}
+
+.hero p{
+color:#aaa;
+font-size:22px;
+margin-bottom:30px;
+animation:fade 2s ease;
+}
+
+.btn{
+padding:15px 35px;
+background:orange;
+border:none;
+border-radius:12px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:white;
+}
+
+/* BÖLÜMLER */
+
+section{
+padding:100px 10%;
+}
+
+.title{
+font-size:40px;
+margin-bottom:40px;
+color:orange;
+}
+
+.card{
+background:#151515;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,165,0,0.3);
+}
+
+/* PROJELER */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+color:#777;
+}
+
+/* ANİMASYON */
+
+@keyframes slide{
+
+from{
+transform:translateY(-50px);
+opacity:0;
+}
+
+to{
+transform:translateY(0);
+opacity:1;
+}
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+/* MOBİL */
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:45px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
+</style>
 
 </head>
+
 <body>
 
-  <!-- GİRİŞ -->
-  <header>
-    <h1>Merhaba, Ben Muhammed</h1>
-    <p>Web Developer Adayı 🚀</p>
-    <button class="btn">Projelerimi Gör</button>
-  </header>
+<!-- NAVBAR -->
 
-  <!-- HAKKIMDA -->
-  <section>
-    <h2>Hakkımda</h2>
-    <div class="card">
-      Web geliştirme öğreniyorum. HTML, CSS ve JavaScript ile projeler yapıyorum.
-      Hedefim freelance çalışmak ve kendi işlerimi üretmek.
-    </div>
-  </section>
+<nav>
 
-  <!-- PROJELER -->
-  <section>
-    <h2>Projelerim</h2>
+<h1>Muhammed</h1>
 
-    <div class="card">✔ İlk Portfolyo Sitesi</div>
-    <div class="card">✔ Hesap Makinesi (yakında)</div>
-    <div class="card">✔ To-Do App (yakında)</div>
+<ul>
 
-  </section>
+<li><a href="">Ana Sayfa</a></li>
+<li><a href="">Hakkımda</a></li>
+<li><a href="">Projeler</a></li>
+<li><a href="">İletişim</a></li>
 
-  <!-- İLETİŞİM -->
-  <section>
-    <h2>İletişim</h2>
-    <div class="card">
-      Email: muhammed66ars@gmail.com<br>
-      Instagram: @arslan_muhammedanil
-    </div>
-  </section>
+</ul>
 
-  <footer>
-    © 2026 - Muhammed Arslan
-  </footer>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h2>
+Merhaba, Ben <span>Muhammed</span>
+</h2>
+
+<p>
+Modern Web Siteleri Yapıyorum 🚀
+</p>
+
+<a href="https://wa.me/905060351866">
+
+<button class="btn">
+Bana Ulaş
+</button>
+
+</a>
+
+</div>
+
+<!-- HAKKIMDA -->
+
+<section>
+
+<h2 class="title">
+Hakkımda
+</h2>
+
+<div class="card">
+
+Web geliştirme öğreniyorum.
+HTML, CSS ve JavaScript ile modern tasarımlar yapıyorum.
+Hedefim freelance çalışmak ve internetten gelir elde etmek.
+
+</div>
+
+</section>
+
+<!-- PROJELER -->
+
+<section>
+
+<h2 class="title">
+Projelerim
+</h2>
+
+<div class="projects">
+
+<div class="card">
+🔥 Kişisel Portfolyo Site
+</div>
+
+<div class="card">
+⚡ Modern Landing Page
+</div>
+
+<div class="card">
+💼 Freelancer Web Sitesi
+</div>
+
+</div>
+
+</section>
+
+<!-- İLETİŞİM -->
+
+<section>
+
+<h2 class="title">
+İletişim
+</h2>
+
+<div class="card">
+
+📸 Instagram:
+@arslan_muhammedanil
+
+<br><br>
+
+📧 Email:
+muhammed66ars@gmail.com
+
+<br><br>
+
+📱 WhatsApp:
+0506 035 18 66
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Muhammed Arslan
+
+</footer>
 
 </body>
-</html> 
+</html>
